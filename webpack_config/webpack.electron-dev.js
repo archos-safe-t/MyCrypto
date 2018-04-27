@@ -27,16 +27,16 @@ const electronConfig = {
     new ClearDistPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
-    }),
+    })
   ],
   externals: {
-    'node-hid': 'commonjs node-hid',
-    '@ledger/hw-transport-hid': 'commonjs @ledger/hw-transport-hid'
+    '@ledgerhq/hw-transport-node-hid': 'commonjs @ledgerhq/hw-transport-node-hid'
   },
   node: {
     __dirname: false,
     __filename: false
   },
+  //'cheap-module-source-map'
   devtool: 'eval'
 };
 

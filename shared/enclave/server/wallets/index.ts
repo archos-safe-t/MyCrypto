@@ -10,5 +10,7 @@ export const wallets: { [key in WalletTypes]: WalletLib } = {
 };
 
 export function getWalletLib(type: WalletTypes): WalletLib {
+  console.log('Getting wallet');
+  console.log(`Returning ${wallets[type]}`);
   return wallets[type];
 }
